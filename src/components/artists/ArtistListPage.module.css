@@ -1,0 +1,14 @@
+.ArtistListContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ArtistBox {
+  margin: "10px 5px 0 5px";
+}
+
+.ArtistCoverImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+}

@@ -1,0 +1,14 @@
+.BodyContainer {
+  margin-top: 56px;
+  background-color: blue;
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+.LandingPage {
+  color: white;
+  font-size: 20px;
+}

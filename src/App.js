@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Route, Switch, Router } from "react-router-dom";
+import ArtistListPage from "./components/artists/ArtistListPage";
+import Header from "./components/Header";
+import SideDrawer from "./components/UI/SideDrawer";
+import styles from "./App.module.css";
 
 function App() {
+  let [sideDrawerOpen, setSideDrawerOpen] = useState(false);
+
+  const toggleSideDrawer = () => setSideDrawerOpen(true);
+  const navLinks = [{ link: "/artists", name: "Artists" }];
+
+  const landingPage = <div className={styles.LandingPage}>Welcom to MDB!</div>;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <Header onClick={toggleSideDrawer} />
+      <SideDrawer
+        open={sideDrawerOpen}
+        onClose={() => setSideDrawerOpen(false)}
+        links={navLinks}
+      />
+      <div className={styles.BodyContainer}>
+        <Switch>
+          <Route path="/artists" component={ArtistListPage} />
+          <Route path="/">{landingPage}</Route>
+        </Switch>
+      </div>
     </div>
   );
 }
