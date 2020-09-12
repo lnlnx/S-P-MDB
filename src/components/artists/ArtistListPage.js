@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import ArtistBox from "./ArtistBox";
 import ArtistPage from "./ArtistPage";
 import axios from "axios";
@@ -23,24 +23,29 @@ const ArtistListPage = () => {
   }, []);
 
   let artistList = (
-    <div className={styles.ArtistListContainer}>
-      {artists.map(({ name, id }) => (
-        <Link to={`${url}/${id}`} key={id}>
-          <ArtistBox name={name} />
-        </Link>
-      ))}
-    </div>
+    <Fragment>
+      <h2 className={styles.ListTitle}>
+        <a>Artists List</a>
+      </h2>
+      <div className={styles.ArtistListContainer}>
+        {artists.map(({ name, id }) => (
+          <Link to={`${url}/${id}`} key={id}>
+            <ArtistBox name={name} />
+          </Link>
+        ))}
+      </div>
+    </Fragment>
   );
 
   return (
-    <>
+    <div>
       <Switch>
         <Route path={`${path}/:artistId`}>
           <ArtistPage />
         </Route>
         <Route path={path}>{artistList}</Route>
       </Switch>
-    </>
+    </div>
   );
 };
 

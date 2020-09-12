@@ -1,0 +1,54 @@
+.SongList {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.SongName {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.SongName::before {
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 0.8rem;
+  font-family: "Abril Fatface", serif;
+  line-height: 1;
+}
+
+.AlbumBox {
+  background-color: rgba(105, 105, 105, 0.2);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+  min-width: 400px;
+  padding: 10px 10px;
+  margin: 0 0 20px 0;
+  border: 1px solid rgba(72, 72, 72, 0.4);
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 780px) {
+  .AlbumBox {
+    /* width: 90%; */
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+}
+
+.CoverContainer p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}

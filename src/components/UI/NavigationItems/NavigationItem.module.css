@@ -16,7 +16,7 @@
 }
 
 .NavigationItem a:hover,
-.NavigationItem a:active,
+.NavigationItem a:focus,
 .NavigationItem a.active {
   border-bottom: 2px solid white;
 }

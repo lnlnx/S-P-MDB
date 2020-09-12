@@ -1,27 +1,27 @@
 {
   "artists": [
     {
-      "name": "test1",
+      "name": "Artist Name1",
       "id": 1
     },
     {
-      "name": "test2",
+      "name": "Artist Name2",
       "id": 2
     },
     {
-      "name": "test3",
+      "name": "Artist Name3",
       "id": 3
     },
     {
-      "name": "test4",
+      "name": "Artist Name4",
       "id": 4
     },
     {
-      "name": "test5",
+      "name": "Artist Name5",
       "id": 5
     },
     {
-      "name": "test6",
+      "name": "Artist Name6",
       "id": 6
     }
   ],
@@ -29,11 +29,12 @@
     {
       "artistId": 1,
       "id": 1,
+      "name": "Artist Name1",
       "albums": [
         {
           "albumId": 1,
           "albumTitle": "1st album title",
-          "songs": ["1stSong", "2ndSong"]
+          "songs": ["1stSong super super super super super long", "2ndSong"]
         },
         {
           "albumId": 2,
@@ -60,6 +61,7 @@
     {
       "artistId": 2,
       "id": 2,
+      "name": "Artist Name2",
       "albums": [
         {
           "albumId": 1,
@@ -91,6 +93,7 @@
     {
       "artistId": 3,
       "id": 3,
+      "name": "Artist Name3",
       "albums": [
         {
           "albumId": 1,
@@ -122,6 +125,7 @@
     {
       "artistId": 4,
       "id": 4,
+      "name": "Artist Name4",
       "albums": [
         {
           "albumId": 1,
@@ -153,6 +157,7 @@
     {
       "artistId": 5,
       "id": 5,
+      "name": "Artist Name5",
       "albums": [
         {
           "albumId": 1,
@@ -184,6 +189,7 @@
     {
       "artistId": 6,
       "id": 6,
+      "name": "Artist Name6",
       "albums": [
         {
           "albumId": 1,

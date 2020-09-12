@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Switch, Router, useLocation } from "react-router-dom";
+import { Route, Switch, Router, useLocation, Redirect } from "react-router-dom";
 import ArtistListPage from "./components/artists/ArtistListPage";
 import Header from "./components/Header";
 import SideDrawer from "./components/UI/SideDrawer";
@@ -11,11 +11,11 @@ function App() {
 
   const toggleSideDrawer = () => setSideDrawerOpen(true);
   let navLinks = [
-    { link: "/", name: "Home", active: false },
+    { link: "/home", name: "Home", active: false },
     { link: "/artists", name: "Artists", active: false },
   ];
   for (let navLink of navLinks) {
-    if (navLink.link === location.pathname) {
+    if (location.pathname.includes(navLink.link)) {
       navLink.active = true;
     }
   }
@@ -33,7 +33,15 @@ function App() {
       <div className={styles.BodyContainer}>
         <Switch>
           <Route path="/artists" component={ArtistListPage} />
-          <Route path="/">{landingPage}</Route>
+          <Route path="/home">{landingPage}</Route>
+          <Route path="/">
+            <Redirect
+              to={{
+                pathname: "/home",
+                state: { from: location },
+              }}
+            />
+          </Route>
         </Switch>
       </div>
     </div>

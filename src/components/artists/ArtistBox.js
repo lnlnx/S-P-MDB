@@ -6,7 +6,8 @@ const ArtistBox = ({ name }) => {
   return (
     <div className={styles.ArtistBox}>
       <img alt="artist" src={ArtistCover} className={styles.ArtistCoverImage} />
-      <div>{name}</div>
+      <h5 className={styles.ArtistTitle}>{name}</h5>
+      <p className={styles.ArtistDescription}>Very cool artist!</p>
     </div>
   );
 };

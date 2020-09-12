@@ -1,12 +1,13 @@
 .BodyContainer {
   padding-top: 56px;
   background-color: #181818;
-  height: 80%;
-  max-height: 100%;
+  min-height: 100vh;
+  min-width: 100%;
 }
 
 .App {
   height: 100%;
+  min-height: 100%;
   background-color: #181818;
 }
 
