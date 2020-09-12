@@ -14,5 +14,5 @@ Below command will start a React application on port 3000 and a json-server on p
 The json-server was used a mock api server for getting artist and album data.
 
 ```
-yarn start
+yarn start (or npm start)
 ```
