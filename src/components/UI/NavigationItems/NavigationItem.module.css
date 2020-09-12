@@ -3,20 +3,25 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
+  text-align: center;
 }
+
 .NavigationItem a {
+  background-color: transparent;
+  color: #b3b3b3;
   text-decoration: none;
   width: 100%;
-  border-bottom: 4px solid transparent;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 .NavigationItem a:hover,
 .NavigationItem a:active,
 .NavigationItem a.active {
-  color: #40a4c8;
+  border-bottom: 2px solid white;
 }
 
+/* 
 @media (min-width: 500px) {
   .NavigationItem {
     margin: 0;
@@ -38,4 +43,4 @@
     border-bottom: 4px solid #40a4c8;
     color: white;
   }
-}
+} */

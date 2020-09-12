@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,10 +16,10 @@
 .DrawerToggle {
   width: 40px;
   height: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
+  background-color: transparent;
+  color: white;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
   box-sizing: border-box;
 }

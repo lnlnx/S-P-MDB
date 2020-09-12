@@ -8,8 +8,8 @@ const SideDrawer = ({ open, links, onClose }) => {
     ? [styles.SideDrawer, styles.Open]
     : [styles.SideDrawer, styles.Close];
 
-  const navigationLinks = links.map(({ link, name }) => (
-    <NavigationItem link={link} active>
+  const navigationLinks = links.map(({ link, name, active }) => (
+    <NavigationItem link={link} active={active}>
       {name}
     </NavigationItem>
   ));
